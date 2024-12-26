@@ -12,7 +12,7 @@ class FlatIterator:
         self.cursor_i += 1
         if self.cursor_i == len(self.list_of_list[self.cursor_l]):
             self.cursor_l += 1
-            self.cursor_i = -1
+            self.cursor_i = 0
         if self.cursor_l == len(self.list_of_list):
             raise StopIteration
         return self.list_of_list[self.cursor_l][self.cursor_i]
@@ -38,3 +38,4 @@ def test_1():
 
 if __name__ == '__main__':
     test_1()
+
